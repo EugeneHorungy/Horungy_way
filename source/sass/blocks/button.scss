@@ -1,0 +1,55 @@
+.button {
+  @include text($text-color-white, 700, normal, $primary-font);
+  @include text-size(12px, 15px);
+
+  display: block;
+  padding: 30px 30px 30px 40px;
+  background-color: $button-background-color;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+
+  &--country {
+    padding-right: 38px;
+
+    @media (max-width: $max-tablet-width) {
+      width: 250px;
+    }
+  }
+
+  &--questions {
+    padding: 18px 40px;
+
+    @media (max-width: $max-tablet-width) {
+      width: 250px;
+    }
+  }
+
+  &--modal {
+    padding: 18px 40px;
+    min-width: 176px;
+
+    @media (max-width: $max-mobile-width) {
+      min-width: 288px;
+    }
+  }
+
+  &:hover,
+  &:active {
+    background-color: $button-background-color-hover;
+    transition: 0.5s;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    @include text-size(10px, 12px);
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 288px;
+    font-weight: 500;
+  }
+}

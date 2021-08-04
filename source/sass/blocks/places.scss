@@ -1,0 +1,73 @@
+.places {
+  @include container-desktop();
+
+  margin-bottom: 110px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include container();
+    margin-bottom: 24px;
+  }
+}
+
+.places__title {
+  @include text-reset();
+  @include text($text-color-accent, 600, normal, $primary-font);
+  @include text-size(55px, 80px);
+
+  margin-top: 200px;
+  margin-bottom: 31px;
+  padding-bottom: 32px;
+  position: relative;
+  letter-spacing: -1.245px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 228px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: $title-underline-color;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    @include text-size(30px, 45px);
+
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    letter-spacing: 0;
+
+    &--newline,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include text-size(24px, 36px);
+  }
+}
+
+.places__info {
+  @include text-reset();
+  @include text($text-color-gray, 400, normal, $primary-font);
+  @include text-size(16px, 28px);
+
+  letter-spacing: -0.467px;
+  margin-bottom: 54px;
+
+  @media (max-width: $max-tablet-width) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 20px;
+  }
+}

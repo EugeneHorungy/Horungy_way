@@ -1,0 +1,33 @@
+.footer {
+  @include container-desktop();
+
+  padding-bottom: 74px;
+  padding-top: 16px;
+  padding-left: 72px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $max-tablet-width) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
+}

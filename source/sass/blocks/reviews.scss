@@ -1,0 +1,203 @@
+.reviews {
+  width: 382px;
+  padding: 20px 30px 40px;
+  background-color: $main-background-color;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: -35px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -75px;
+  }
+}
+
+.reviews__title {
+  @include text-reset();
+  @include text($text-color-accent, 500, normal, $primary-font);
+  @include text-size(30px, 37px);
+
+  letter-spacing: -0.69px;
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 21px;
+  margin-top: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 68px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: $title-underline-color;
+
+    @media (max-width: $max-mobile-width) {
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include text-size(20px, 24px);
+  }
+}
+
+.reviews__text {
+  @include text-reset();
+  @include text($text-color-gray, 400, normal, $primary-font);
+  @include text-size(14px, 28px);
+
+  letter-spacing: -0.41px;
+  margin-bottom: 42px;
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+    margin-bottom: 68px;
+  }
+}
+
+.reviews__author {
+  @include text-reset();
+  @include text($text-color-accent, 500, normal, $primary-font);
+  @include text-size(16px, 20px);
+
+  letter-spacing: -0.47px;
+  padding-left: 52px;
+  position: relative;
+
+  &--greece::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 38px;
+    background-image: url("../img/review-avatars/greece-review-avatar.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 37px 38px;
+    transform: translateY(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      left: 50%;
+      top: -52px;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-avatars/greece-review-avatar@2x.png");
+    }
+  }
+
+  &--macedonia::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 38px;
+    background-image: url("../img/review-avatars/macedonia-review-avatar.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 37px 38px;
+    transform: translateY(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      left: 50%;
+      top: -52px;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-avatars/macedonia-review-avatar@2x.png");
+    }
+  }
+
+  &--albania::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 38px;
+    background-image: url("../img/review-avatars/albania-review-avatar.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 37px 38px;
+    transform: translateY(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      left: 50%;
+      top: -52px;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-avatars/albania-review-avatar@2x.png");
+    }
+  }
+
+  &--montenegro::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 38px;
+    background-image: url("../img/review-avatars/montenegro-review-avatar.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 37px 38px;
+    transform: translateY(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      left: 50%;
+      top: -52px;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-avatars/montenegro-review-avatar@2x.png");
+    }
+  }
+
+  &--croatia::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 38px;
+    background-image: url("../img/review-avatars/croatia-review-avatar.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 37px 38px;
+    transform: translateY(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      left: 50%;
+      top: -52px;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-avatars/croatia-review-avatar@2x.png");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+  }
+}

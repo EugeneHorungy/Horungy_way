@@ -1,0 +1,120 @@
+.nav {
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.nav__list {
+  @include list-reset();
+
+  display: flex;
+  background-color: $main-background-color;
+
+  @media (max-width: $max-tablet-width) {
+    top: 50px;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
+
+.nav__list-item {
+  margin-right: 40px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+
+.nav__list-link {
+  @include text($text-color-dark, 500, normal, $primary-font);
+  @include text-size(14px, 17px);
+
+  &:hover {
+    color: $text-color-active;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    @include text-size(20px, 28px);
+
+    display: block;
+    position: relative;
+    padding: 17px 20px;
+    color: $menu-nav-text-color;
+    background-color: $menu-nav-background-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 14px;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-image: url("../img/menu/menu-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 24px 14px;
+    }
+  }
+}
+
+.nav__button {
+  display: none;
+
+  @media (max-width: $max-tablet-width) {
+    display: block;
+    width: 72px;
+    height: 50px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    border: none;
+
+    &--opened {
+      width: 50px;
+      background-color: $main-background-color;
+    }
+
+    &--closed {
+      background-color: $button-background-color;
+    }
+
+    &--opened::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../img/menu/menu-cross.svg");
+      background-repeat: no-repeat;
+      background-size: 22px 22px;
+    }
+
+    &--closed::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../img/menu/menu-burger.svg");
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 50px;
+  }
+}
+
+.nav__list--js {
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
+}

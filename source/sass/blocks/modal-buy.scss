@@ -1,0 +1,137 @@
+.modal-buy {
+  display: none;
+  width: 728px;
+  height: 444px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $modal-background-color;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("../img/background/form-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 338px 444px;
+  z-index: 10;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/form-background@2x.jpg");
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    background-image: none;
+    background-color: $main-background-color;
+    min-height: 568px;
+  }
+}
+
+.modal-buy__wrapper {
+  width: 390px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 90px;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding-bottom: 185px;
+    padding-top: 100px;
+  }
+}
+
+.modal-buy__button-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-bottom: auto;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/menu/menu-cross.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+  }
+}
+
+.modal-buy__title {
+  @include text-reset();
+  @include text($form-title-color, 600, normal, $primary-font);
+  @include text-size(25px, 43px);
+
+  margin-bottom: 50px;
+}
+
+.modal-buy__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 16px;
+    padding-right: 20px;
+  }
+}
+
+.modal-buy__form-label {
+  width: 100%;
+}
+
+.modal-buy__form-input {
+  width: 100%;
+  border: 1px solid $input-border-color;
+}
+
+.modal-buy__form-input--phone {
+  padding-top: 16px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 26px;
+}
+
+.modal-buy__form-input--email {
+  padding-top: 16px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.modal-buy__form-label--phone {
+  position: relative;
+}
+
+.modal-buy__form-label--phone::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  left: 15px;
+  top: 11px;
+  background-image: url("../img/decoration/footnote.svg");
+}
+
+.modal-buy__form-input::placeholder {
+  @include text($text-color-dark, 400, normal, $primary-font);
+  @include text-size(14px, 17px);
+}
+
+.modal--show {
+  display: flex;
+}

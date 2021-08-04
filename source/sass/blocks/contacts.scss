@@ -1,0 +1,30 @@
+.contacts {
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
+}
+
+.contacts__phone {
+  @include text($text-color-dark, 400, normal, $primary-font);
+  @include text-size(18px, 32px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: $text-color-active;
+  }
+}
+
+.contacts__phone-icon {
+  stroke: currentColor;
+}
+
+.contacts__phone-icon {
+  margin-right: 12px;
+}
+
+.contacts__phone-number {
+  text-decoration: underline;
+}

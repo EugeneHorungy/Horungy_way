@@ -1,0 +1,42 @@
+.header {
+  background-color: $main-background-color;
+
+  @media (max-width: $max-tablet-width) {
+    position: relative;
+  }
+}
+
+.header__wrapper {
+  @media (min-width: $desktop-width-only) {
+    @include container-desktop();
+  }
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: $max-tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.header__logo {
+  margin-top: 38px;
+  margin-bottom: 38px;
+  margin-right: auto;
+
+  @media (max-width: $max-tablet-width) {
+    position: absolute;
+    top: -21px;
+    left: 21px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    top: -19px;
+    left: 16px;
+  }
+}
+
+.header__contacts {
+  margin-left: 30px;
+}

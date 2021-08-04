@@ -1,0 +1,60 @@
+.modal-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 728px;
+  height: 444px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $modal-background-color;
+  align-items: center;
+  background-color: $modal-background-color;
+  z-index: 16;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.modal-success__title {
+  @include text-reset();
+  @include text($form-title-color, 500, normal, $primary-font);
+  @include text-size(25px, 43px);
+
+  padding-bottom: 179px;
+  text-align: center;
+}
+
+.modal-success__button-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-bottom: auto;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/menu/menu-cross.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+  }
+}
+
+.modal--show {
+  display: flex;
+}

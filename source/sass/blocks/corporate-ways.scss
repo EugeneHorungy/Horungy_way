@@ -1,0 +1,48 @@
+.corporate-ways {
+  position: relative;
+  width: 336px;
+  padding-left: 5px;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+    border-top: 1px solid $footer-border-color;
+    padding-top: 30px;
+  }
+}
+
+.corporate-ways::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: -52px;
+  background-color: $footer-border-color;
+}
+
+.corporate-ways__title {
+  @include text-reset();
+  @include text($text-color-dark, 600, normal, $primary-font);
+  @include text-size(18px, 32px);
+
+  margin-bottom: 20px;
+}
+
+.corporate-ways__text {
+  @include text-reset();
+  @include text($text-color-transparent-dark, 400, normal, $primary-font);
+  @include text-size(14px, 24px);
+
+  @media (max-width: $max-tablet-width) {
+    &--newline {
+      display: none;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
