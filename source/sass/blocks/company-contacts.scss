@@ -58,6 +58,7 @@
 
 .company-contacts__icon-mail {
   fill: #d7d9df;
+  stroke: #d7d9df;
 
   @media (max-width: $max-tablet-width) {
     margin-right: 16px;
@@ -70,4 +71,5 @@
 
 .company-contacts__link--mail:hover .company-contacts__icon-mail {
   fill: $text-color-active;
+  stroke: $text-color-active;
 }
